@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+         }
+
+         /* Mobile view: 1 image per row */
+         @media (max-width: 768px) {
+            .grid-container {
+               grid-template-columns: repeat(1, 1fr);
+            }
+         }
+
+        .grid-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .modal-fullscreen {
+         width: 100vw;
+         height: 100vh;
+         margin: 0;
+         padding: 0;
+         max-width: 100%;
+      }
+
+      .modal-content {
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .modal-body {
+         flex-grow: 1;
+         overflow-y: auto;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="header_section">
+        <div class="container-fluid header_main">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+                        <li class="nav-item"><a style="color:gold" class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Contact Us</a></li>
+                        <li class="nav-item"><a style="color:lightgreen" class="nav-link" href="">Access Pass</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="container"><br><br><br><br><br>
+        <h2 class="text-center mt-4"><b>Blog Posts</b></h2>
+        <div class="grid-container" id="gridContainer"></div>
+        <div class="pagination">
+            <button class="btn btn-primary" id="prevPage">Previous</button>
+            <span id="pageNumber" class="mx-3">1</span>
+            <button class="btn btn-primary" id="nextPage">Next</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-fullscreen" role="document">
+         <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const blogPosts = [
+            { title: "Thriving in the Flux", image: "images/img-1.png", 
+            content: " Today’s workplace moves fast: AI reshapes roles, hybrid work demands balance, and economic uncertainty keeps everyone on edge. But as disciples, we’re called to navigate change with unshakable purpose. Proverbs 3:5-6 reminds us, “Trust in the Lord…and He will direct your paths.” Adaptability isn’t about keeping up—it’s about leaning into God’s guidance to lead boldly. Here’s how to stay anchored while riding the waves of change. 1. Ground Your GPS (Core Values): Start by coding your career with integrity, humility, and service (Colossians 3:23). In a hybrid world, that means showing up authentically—whether your camera’s on or off. Use AI to boost productivity, but prioritize people over tasks. Automate emails, not empathy. When roles shift, ask: “How can I reflect Christ here?” Like Paul adapting to prisons or palaces, your mission stays fixed, even if your methods flex. ..we’re called to navigate change with unshakable purpose. 2. Flex Your Agility Muscle (Learn, Don’t Panic): Upskill relentlessly—master new tools, but also nurture timeless skills like active listening and problem-solving. Jesus trained His disciples for unpredictable missions (Matthew 10), and we’re called to do the same. Stressed about AI? Take a course, then mentor someone else. Economic jitters? Save wisely but reject fear—God’s track record with sparrows (Matthew 6:26) suggests He’s got your career covered. 3. Redefine Success (Impact > Metrics): Companies measure ROI, but God measures faithfulness. Did you encourage a colleague? Advocate for fairness? That’s kingdom work. In a results-driven world, be the coworker who radiates peace, not panic. As Jesus said, “Store up treasures in heaven” (Matthew 6:20)—invest in relationships, not just résumés. Joseph’s Adaptability Blueprint: From favored son to slave, prisoner, and Egypt’s leader, Joseph (Genesis 37–50) exemplifies biblical adaptability by trusting God’s sovereignty amid relentless change. He embraced unexpected pivots—leveraging management skills in Potiphar’s house, interpreting dreams in prison, and innovating crisis plans (e.g., storing grain for famine)—while anchoring his identity in divine purpose. Adaptability isn’t about keeping up—it’s about keeping FAITH. Despite betrayal, he reframed adversity as opportunity, declaring, “You intended to harm me, but God intended it for good” (Genesis 50:20). Joseph’s story teaches modern disciples to steward their gifts in any role, lead wisely under pressure, forgive past hurts, and collaborate for shared goals. Like today’s workplace challenges—AI, economic shifts, or hybrid dynamics—his journey proves adaptability thrives not by resisting change but by partnering with God’s redemptive purpose in every season. 4. Bottom Line: Adaptability = Active Faith: Change isn’t a threat—it’s a stage for God’s faithfulness. This week, swap anxiety for action: Pray over your to-do list, then pick one skill to learn or one teammate to encourage. Remember, “I can do all things through Christ” (Philippians 4:13)—even thrive in chaos. Stay light on your feet, rooted in truth, and watch what He does next. 💪🕊️ Joseph’s story teaches modern disciples to steward their gifts in any role, lead wisely under pressure, forgive past hurts, and collaborate for shared goals."},
+            { title: "Thriving in the Flux", image: "images/img-2-3.png", content: "Long text for post 2..." },
+            { title: "Thriving in the Flux", image: "images/img-2-4.png", content: "Long text for post 3..." },
+            { title: "Thriving in the Flux", image: "images/img-2-2.png", content: "Long text for post 4..." },
+            { title: "Thriving in the Flux", image: "images/img-2-3.png", content: "Long text for post 5..." },
+            { title: "Thriving in the Flux", image: "images/img-2-4.png", content: "Long text for post 6..." },
+            { title: "Thriving in the Flux", image: "images/img-2-2.png", content: "Long text for post 7..." },
+            { title: "Thriving in the Flux", image: "images/img-2-3.png", content: "Long text for post 8..." },
+            { title: "Thriving in the Flux", image: "images/img-2-4.png", content: "Long text for post 9..." },
+            { title: "Thriving in the Flux", image: "images/img-2-2.png", content: "Long text for post 10..." }
+        ];
+        let currentPage = 1;
+        const itemsPerPage = 9;
+
+        function displayPosts() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const postsToShow = blogPosts.slice(start, end);
+            const gridContainer = document.getElementById("gridContainer");
+            gridContainer.innerHTML = "";
+            postsToShow.forEach(post => {
+                const item = document.createElement("div");
+                item.className = "grid-item";
+                item.innerHTML = `<img src="${post.image}" alt="${post.title}"><h5>${post.title}</h5>`;
+                item.onclick = () => openModal(post);
+                gridContainer.appendChild(item);
+            });
+            document.getElementById("pageNumber").innerText = currentPage;
+        }
+
+        function openModal(post) {
+            document.getElementById("modalTitle").innerText = post.title;
+            document.getElementById("modalBody").innerText = post.content;
+            $("#blogModal").modal("show");
+        }
+
+        document.getElementById("prevPage").addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPosts();
+            }
+        });
+
+        document.getElementById("nextPage").addEventListener("click", () => {
+            if (currentPage * itemsPerPage < blogPosts.length) {
+                currentPage++;
+                displayPosts();
+            }
+        });
+
+        displayPosts();
+    </script>
+</body>
+</html>
