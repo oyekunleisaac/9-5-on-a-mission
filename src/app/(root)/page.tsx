@@ -1,4 +1,3 @@
-import ContactUs from "@/components/Contact";
 import Hero from "@/components/Hero";
 import LatestPosts from "@/components/LatestPosts";
 import Footer from "@/components/Shared/Footer";
@@ -12,7 +11,7 @@ const page: NextPage = () => {
       <Header />
       <Hero />
       <LatestPosts />
-      <ContactUs />
+      {/* <ContactUs /> */}
       <Footer />
     </div>
   );

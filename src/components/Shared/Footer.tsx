@@ -1,68 +1,57 @@
 import React from "react";
-import { IoMailOutline } from "react-icons/io5";
+import Image from "next/image";
+import logo from "../../../public/logo.png";
 
 const Footer = () => {
   return (
     <div className="bg-[#F6F6F7]">
-      <div className="maxWidth p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-4 text-lg">
+      <div className="maxWidth p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-8 gap-4 text-lg relative">
         <div>
           <h1 className="font-semibold text-xl mb-4">About</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam
+            9-5 on a mission is a blog dedicated to helping individuals
+            navigate the complexities of modern work life. 
           </p>
           <div className="mt-4">
             <h1>
-              <span className="font-semibold">Email: </span>info@template.net
+              <span className="font-semibold">Email: </span>bolaadisa@gmail.com
             </h1>
             <h1>
-              <span className="font-semibold">Phone: </span>88123456789
+              <span className="font-semibold">Phone: </span>+234 706 154 7518
             </h1>
           </div>
         </div>
-        <div>
+        {/* Centered logo */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none select-none">
+          <Image src={logo} alt="logo" width={90} height={90} />
+        </div>
+        <div className="lg:col-start-4 lg:col-end-5">
           <h1 className="font-semibold text-xl mb-4">Quick Link</h1>
           <ul className="flex flex-col gap-2 text-lg">
             <li>Home</li>
             <li>About</li>
             <li>Blog</li>
-            <li>Archived</li>
-            <li>Author</li>
+            <li>Books</li>
+            {/* <li>Author</li> */}
             <li>Contact</li>
           </ul>
         </div>
-        <div>
-          <h1 className="font-semibold text-xl mb-4">Category</h1>
-          <ul className="flex flex-col gap-2 text-lg">
-            <li>Lifestyle</li>
-            <li>Technology</li>
-            <li>Travel</li>
-            <li>Business</li>
-            <li>Economy</li>
-            <li>Sports</li>
-          </ul>
-        </div>
-        <div className="bg-white text-center p-4 py-8 rounded-2xl h-fit">
-          <h1 className="font-semibold text-xl mb-4">Weekly Newsletter</h1>
-          <p>Get blog articles and offers via email</p>
-          <form action="">
-            <div className="border-2 flex justify-between items-center p-2 rounded-lg mt-4">
-              <input
-                className="border-none outline-none text-sm"
-                placeholder="Your Email"
-                type="text"
-              />
-              <IoMailOutline />
-            </div>
-            <button
-              className="w-full bg-[#4B6BFB] font-semibold mt-3 py-3 text-white rounded-xl"
-              type="submit"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+      </div>
+      {/* Thick footer bar */}
+      <div className="bg-[#e2e3e5] flex flex-col items-center justify-center px-8 py-4 mt-4">
+        <span className="text-gray-700 text-base font-medium text-center">
+          © 2025 9-5 on a mission. All rights reserved. &nbsp;|&nbsp; 
+          Developed By{" "}
+          <a
+            href="https://www.enclinks.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-700"
+            style={{ textDecoration: "none" }}
+          >
+            Enclinks Technologies
+          </a>
+        </span>
       </div>
     </div>
   );
