@@ -27,19 +27,19 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, [index]);
 
-  return (
-    <div className="heroSec min-h-[90vh]">
-      <div className="text-center absolute rounded-xl md:w-1/2 shadow-md left-6 p-4 top-1/3 bg-white/70 backdrop-blur-sm">
-        <h1 className="font-bold text-4xl">
-          The Impact of Technology on the Workplace: How Technology is Changing
-        </h1>
-        <p className="font-semibold text-2xl mt-8">
-          {displayed}
-          <span className="animate-pulse">|</span>
-        </p>
-      </div>
+return (
+  <div className="heroSec min-h-[90vh] flex items-center justify-start">
+    <div className="inline-block bg-white/70 backdrop-blur-sm rounded-xl shadow-md p-2 ml-8">
+      <h1 className="font-bold text-2xl whitespace-nowrap text-left">
+        Guiding faith-driven professionals to embody God&apos;s will and excel in their careers
+      </h1>
+      <p className="font-semibold text-xl mt-6 text-left">
+        {displayed}
+        <span className="animate-pulse">|</span>
+      </p>
     </div>
-  );
+  </div>
+);
 };
 
 export default Hero;

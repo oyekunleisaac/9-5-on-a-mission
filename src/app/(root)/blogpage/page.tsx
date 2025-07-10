@@ -14,7 +14,7 @@ export default function BlogPost() {
           </span>
         </div>
         <h1 className="text-3xl font-bold mb-4">
-          The Impact of Technology on the Workplace: How Technology is Changing
+          Guiding faith-driven professionals to embody God&apos;s will and excel in their careers
         </h1>
         <div className="flex items-center text-sm text-gray-500 mb-6 space-x-2">
           <span className="font-medium text-gray-700">Tracey Wilson</span>

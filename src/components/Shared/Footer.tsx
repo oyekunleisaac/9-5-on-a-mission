@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         {/* Centered logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center pointer-events-none select-none">
-          <Image src={logo} alt="logo" width={90} height={90} />
+          <Image src={logo} alt="logo" width={180} height={180} />
         </div>
         <div className="lg:col-start-4 lg:col-end-5">
           <h1 className="font-semibold text-xl mb-4">Quick Link</h1>
