@@ -31,7 +31,7 @@ return (
   <div className="heroSec min-h-[90vh] flex items-center justify-start">
     <div className="inline-block bg-white/70 backdrop-blur-sm rounded-xl shadow-md p-2 ml-8">
       <h1 className="font-bold text-2xl whitespace-nowrap text-left">
-        Guiding faith-driven professionals to embody God&apos;s will and excel in their careers
+        Guidingg faith-driven professionals to embody God&apos;s will and excel in their careers
       </h1>
       <p className="font-semibold text-xl mt-6 text-left">
         {displayed}
