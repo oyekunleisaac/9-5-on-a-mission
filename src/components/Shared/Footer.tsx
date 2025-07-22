@@ -6,53 +6,48 @@ const Footer = () => {
   return (
     <div className="bg-[#F6F6F7]">
       <div className="maxWidth p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 text-lg">
+
         {/* About Section */}
-        <div className="lg:col-span-4">
-          <h1 className="font-semibold text-xl mb-4">About</h1>
-          <p>
-            9-5 on a mission is a blog dedicated to helping individuals
-            navigate the complexities of modern work life.
-          </p>
-          <div className="mt-4">
+        <div className="lg:col-span-4 flex flex-col w-full" style={{ maxWidth: "320px" }}>
+          <h1 className="font-semibold text-xl mb-4 text-left w-full">About</h1>
+          <div className="w-full text-justify">
             <p>
+              9-5 on a mission is a blog<br />
+              dedicated to helping individuals<br />
+              navigate the complexities of<br />
+              modern work life.
+            </p>
+          </div>
+          <div className="mt-4 w-full">
+            <p className="w-full">
               <span className="font-semibold">Email: </span>bolaadisa@gmail.com
             </p>
-            <p>
+            <p className="w-full">
               <span className="font-semibold">Phone: </span>+234 706 154 7518
             </p>
           </div>
         </div>
 
-        {/* Logo Centered */}
-        <div className="lg:col-span-4 flex justify-center items-center">
+        {/* Logo Centered and Bigger */}
+        <div className="lg:col-span-3 flex justify-center items-center">
           <Image
             src={logo}
             alt="logo"
-            width={200}
-            height={200}
-            className="w-48 h-auto object-contain"
+            width={320}
+            height={320}
+            className="w-80 h-auto object-contain"
           />
         </div>
 
-        {/* Quick Link – placed at far right on desktop */}
-        <div className="lg:col-span-4 flex flex-col items-end">
-          <h1 className="font-semibold text-xl mb-4">Quick Link</h1>
-          <ul className="flex flex-col gap-2 text-lg items-end">
-            <li>
-              Home 
-            </li>
-            <li>
-              About 
-            </li>
-            <li>
-              Blog 
-            </li>
-            <li>
-              Books 
-            </li>
-            <li>
-              Contact 
-            </li>
+        {/* Quick Link – left on mobile, right on desktop */}
+        <div className="lg:col-span-4 flex flex-col items-start text-left lg:items-end lg:text-right w-full">
+          <h1 className="font-semibold text-xl mb-4 w-full">Quick Link</h1>
+          <ul className="flex flex-col gap-2 text-lg w-full">
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Books</li>
+            <li>Contact</li>
           </ul>
         </div>
       </div>

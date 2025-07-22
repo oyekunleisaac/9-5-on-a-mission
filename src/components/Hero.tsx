@@ -28,18 +28,19 @@ const Hero = () => {
   }, [index]);
 
 return (
-  <div className="heroSec min-h-[90vh] flex items-center justify-start">
-    <div className="inline-block bg-white/70 backdrop-blur-sm rounded-xl shadow-md p-2 ml-8">
-      <h1 className="font-bold text-3xl whitespace-nowrap text-left">
-          Guiding faith-driven professionals to embody
-          <br />
-          God&apos;s will and excel in their careers      </h1>
-      <p className="font-semibold text-xl mt-6 text-left">
-        {displayed}
-        <span className="animate-pulse">|</span>
-      </p>
-    </div>
+<div className="heroSec min-h-[90vh] flex items-center justify-start">
+  <div className="inline-block bg-white/70 backdrop-blur-sm rounded-xl shadow-md p-4 sm:p-6 w-full max-w-xl ml-0 sm:ml-8 mt-50 sm:mt-[50px]">
+    <h1 className="font-bold text-2xl sm:text-3xl text-left whitespace-normal">
+      Guiding faith-driven professionals to embody
+      <br />
+      God&apos;s will and excel in their careers
+    </h1>
+    <p className="font-semibold text-lg sm:text-xl mt-6 text-left break-words">
+      {displayed}
+      <span className="animate-pulse">|</span>
+    </p>
   </div>
+</div>
 );
 };
 
