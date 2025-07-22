@@ -5,9 +5,9 @@ import logo from "../../../public/logo.png";
 const Footer = () => {
   return (
     <div className="bg-[#F6F6F7]">
-      <div className="maxWidth p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-lg">
+      <div className="maxWidth p-6 grid grid-cols-1 lg:grid-cols-12 gap-8 text-lg">
         {/* About Section */}
-        <div>
+        <div className="lg:col-span-4">
           <h1 className="font-semibold text-xl mb-4">About</h1>
           <p>
             9-5 on a mission is a blog dedicated to helping individuals
@@ -24,28 +24,35 @@ const Footer = () => {
         </div>
 
         {/* Logo Centered */}
-        <div className="flex justify-center items-center">
+        <div className="lg:col-span-4 flex justify-center items-center">
           <Image
             src={logo}
             alt="logo"
-            width={150}
-            height={150}
-            className="w-32 sm:w-36 md:w-40 h-auto object-contain"
+            width={200}
+            height={200}
+            className="w-48 h-auto object-contain"
           />
         </div>
 
-        {/* Empty filler column to push Quick Link right on large screens */}
-        <div className="hidden lg:block" />
-
         {/* Quick Link – placed at far right on desktop */}
-        <div className="lg:col-start-4">
+        <div className="lg:col-span-4 flex flex-col items-end">
           <h1 className="font-semibold text-xl mb-4">Quick Link</h1>
-          <ul className="flex flex-col gap-2 text-lg">
-            <li>Home</li>
-            <li>About</li>
-            <li>Blog</li>
-            <li>Books</li>
-            <li>Contact</li>
+          <ul className="flex flex-col gap-2 text-lg items-end">
+            <li>
+              Home 
+            </li>
+            <li>
+              About 
+            </li>
+            <li>
+              Blog 
+            </li>
+            <li>
+              Books 
+            </li>
+            <li>
+              Contact 
+            </li>
           </ul>
         </div>
       </div>

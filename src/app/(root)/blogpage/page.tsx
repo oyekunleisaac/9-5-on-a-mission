@@ -14,7 +14,7 @@ export default function BlogPost() {
           </span>
         </div>
         <h1 className="text-3xl font-bold mb-4 whitespace-normal">
-          Guiding faith-driven sprofessionals to embody
+           Guiding faith-driven professionals to embody
           <br />
           God&apos;s will and excel in their careers
         </h1> 
