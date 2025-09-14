@@ -5,10 +5,11 @@ import { FaXTwitter } from "react-icons/fa6";
 const Header = () => {
   return (
     <div className="bg-white sticky top-0 right-0 left-0 z-50">
-    <div className="w-full flex justify-end items-center px-8 py-2">
+      <div className="w-full flex justify-end items-center px-8 py-2">
         {/* <Image src={logo} alt="logo" className="w-24" /> */}
 
-        <div className="flex gap-4">
+        <div className="flex gap-4 items-center">
+          {/* Social Media Icons */}
           <a
             href="https://www.linkedin.com/newsletters/9-to-5-on-a-mission-7303361934005878785/"
             target="_blank"
@@ -35,6 +36,14 @@ const Header = () => {
             aria-label="Twitter (X)"
           >
             <FaXTwitter size={28} />
+          </a>
+          {/* Free Blog Access Button */}
+          <a
+            href="https://paystack.shop/pay/k7jd7nn18o"
+            className="ml-2 px-2 py-1 rounded-md bg-gradient-to-r from-blue-600 to-blue-400 text-white text-sm font-medium shadow hover:from-blue-700 hover:to-blue-500 transition"
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            Free Access with $1 e-book
           </a>
         </div>
       </div>

@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
+import Link from "next/link";
+
 
 const Footer = () => {
   const [showModal, setShowModal] = useState(false);
@@ -44,28 +46,29 @@ const Footer = () => {
         {/* Quick Link – left on mobile, right on desktop */}
         <div className="lg:col-span-4 flex flex-col items-start text-left lg:items-end lg:text-right w-full">
           <h1 className="font-semibold text-xl mb-4 w-full">Quick Link</h1>
-          <ul className="flex flex-col gap-2 text-lg w-full">
-            <li>
-              <a href="/" className="hover:underline">Home</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">About</a>
-            </li>
-            <li>
-              <a href="/all-posts" className="hover:underline">Blog</a>
-            </li>
-            <li>
-              <a href="#" className="hover:underline">Devotionals</a>
-            </li>
-            <li className="w-full lg:text-right">
-              <button
-                className="hover:underline bg-transparent border-none p-0 m-0 text-left lg:text-right w-full"
-                onClick={() => setShowModal(true)}
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
+            <ul className="flex flex-col gap-2 text-lg w-full">
+              <li>
+                <Link href="/" className="hover:underline">Home</Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:underline">About</Link>
+              </li>
+              <li>
+                <Link href="/all-posts" className="hover:underline">Blog</Link>
+              </li>
+              <li>
+                <Link href="/devotionals" className="hover:underline">Devotionals</Link>
+              </li>
+              <li className="w-full lg:text-right">
+                <button
+                  className="hover:underline bg-transparent border-none p-0 m-0 text-left lg:text-right w-full"
+                  onClick={() => setShowModal(true)}
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+
         </div>
       </div>
 
